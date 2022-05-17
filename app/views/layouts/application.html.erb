@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FirstRbapp</title>
+    <title>Draft Manager</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -11,6 +11,25 @@
   </head>
 
   <body>
+    <header>
+      <nav>
+        <% if user_signed_in? %>
+          <div class="navlink">
+            <p>Welcome! <%= current_user.email  %></p>
+            <%= link_to "Top", articles_path %>
+            <%= link_to "New Article", new_article_path %>
+            <%= link_to "logout", destroy_user_session_path %>
+          </div>
+        <% else %>
+          <div class="navlink">
+            <%= link_to "registration", new_user_registration_path %>
+            <%= link_to "login", new_user_session_path %>
+          </div>
+        <% end %>
+      </nav>
+    </header>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
     <%= yield %>
   </body>
 </html>

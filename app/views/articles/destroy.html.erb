@@ -1,0 +1,10 @@
+<h1>Delete Article</h1>
+
+<p>You are going to delete this article now. Are you sure?</p>
+<%= link_to  article.title, article %>
+
+<%= form_with model: article do |form| %>
+    <div>
+        <%= form.submit class: "formbutton"%>
+    </div>
+<% end %>
