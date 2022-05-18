@@ -5,31 +5,38 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <%= favicon_link_tag('favicon.ico') %>
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
-    <header>
-      <nav>
-        <% if user_signed_in? %>
-          <div class="navlink">
-            <p>Welcome! <%= current_user.email  %></p>
-            <%= link_to "Top", articles_path %>
-            <%= link_to "New Article", new_article_path %>
-            <%= link_to "logout", destroy_user_session_path %>
-          </div>
-        <% else %>
-          <div class="navlink">
-            <%= link_to "registration", new_user_registration_path %>
-            <%= link_to "login", new_user_session_path %>
-          </div>
-        <% end %>
-      </nav>
+    <header class="navbar navbar-fixed-top navbar-inverse" >
+        <div class="navbar-inner">
+          <div class="navbar-container"> 
+          <h1>Draft Manager</h1>
+          <nav>
+            <% if user_signed_in? %>
+              
+              <p>Welcome! <%= current_user.email  %></p>
+              <ul class="nav pull-right">
+                <li><%= link_to "Top", articles_path %></li>
+                <li><%= link_to "New Article", new_article_path %></li>
+                <li><%= link_to "logout", destroy_user_session_path %></li>
+              </ul>
+            <% else %>
+              <ul class="nav pull-right">
+                <li><%= link_to "registration", new_user_registration_path %></li>
+                <li><%= link_to "login", new_user_session_path %></li>
+              </ul>
+            <% end %>
+          </nav>
+        </div>
     </header>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= yield %>
+    <div class="body-container">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
   </body>
 </html>

@@ -1,0 +1,116 @@
+@import "bootstrap";
+
+/* universal */
+
+html {
+  overflow-y: scroll;
+}
+
+body {
+  padding-top: 60px;
+  background-color: rgb(233, 231, 231);
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* navbar */
+.navbar-container {
+  color: rgb(173, 171, 171);
+}
+
+.navbar {
+  margin-bottom: 1rem;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav a {
+  color: rgb(173, 171, 171);
+}
+
+.navbar-inner {
+  margin-left: 5em;
+}
+
+/* article index */
+.body-container {
+  padding-top: 3.5rem;
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+.body-container li {
+  list-style: none;
+  font-size: medium;
+  color: rgb(107, 106, 106);
+}
+
+.body-container a {
+  color: rgb(117, 87, 172);
+  font-weight: bold;
+}
+
+.linkToOther {
+  padding-left: 1em;
+}
+
+/* Add new article */
+.formbutton {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
+
+/* earch article*/
+.showTitle {
+  font-size: xx-large;
+  margin-top: 5rem;
+  color: rgb(92, 90, 90);
+}
+
+.showBody {
+  font-size: large;
+  color: rgb(61, 61, 61);
+}
+
+.showAction {
+  padding-top: 2em;
+}
+
+.showAction ul {
+  padding-left: 0em;
+}
+
+.showComment {
+  margin-top: 3rem;
+}
+
+.showComment p {
+  color: rgb(92, 90, 90);
+  font-size: x-large;
+}
+
+.addComment {
+  margin-top: 3rem;
+  color: rgb(92, 90, 90);
+  font-size: large;
+}
+
+hr {
+  height: 5px;
+}

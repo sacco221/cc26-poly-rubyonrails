@@ -1,5 +1,4 @@
-<h1>Draft Manager</h1>
-<div class="pageTitle">
+<div class="center pageTitle">
     <h2>Articles</h2>
 </div>
 <ul>
@@ -7,11 +6,12 @@
         <% unless article.archived? %>
             <div class="articleLine">
                 <li>
-                    <%= link_to  article.title, article %>(status: <%= article.status %>)
+                    <%= link_to  article.title, article  %>(status: <%= article.status %>)
                 </li>
             </div>
         <% end %>
     <% end %>
 </ul>
 
-<%= link_to "New Article", new_article_path %>
+<%= link_to "[Add New Article Here]", new_article_path , class: "linkToOther fixed-bottom" %>
+

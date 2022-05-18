@@ -1,17 +1,17 @@
 <%= form_with model: [ @article, @article.comments.build ] do |form| %>
     <p>
-        <%= form.label :commenter , class: "control-label" %><br>
-        <%= form.text_field :commenter, class: "formtitle" %>
+        <%= form.label :"commenter name" , class: "control-label" %><br>
+        <%= form.text_field :commenter , class: "form-control", :placeholder => "Enter your name..." %>
     </p>
     <p>
-        <%= form.label :body, class: "control-label"%><br>
-        <%= form.text_area :body, class: "formbody"%>
+        <%= form.label :"your comment", class: "control-label"%><br>
+        <%= form.text_area :body, class: "form-control" , :placeholder => "Enter your comment..."%>
     </p>
     <p>
         <%= form.label :status, class: "control-label" %>
-        <%= form.select :status, ["public", "private", "archived"], selected: "public", class: "formstatus" %>
+        <%= form.select :status, ["public", "private", "archived"], selected: "public", class: "form-control" %>
     </p>
     <p>
-        <%= form.submit class: "formbutton" %>
+        <%= form.submit class: "btn btn-primary formbutton" %>
     </p>
 <% end %>
