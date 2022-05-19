@@ -17,7 +17,6 @@
           <h1>Draft Manager</h1>
           <nav>
             <% if user_signed_in? %>
-              
               <p>Welcome! <%= current_user.email  %></p>
               <ul class="nav pull-right">
                 <li><%= link_to "Top", articles_path %></li>
